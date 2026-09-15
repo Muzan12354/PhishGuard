@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cybercrime.css') }}">
+<title>PhishGuard - Cyber Crime</title>
+</head>
+<body>
+
+<nav>
+  <h2>🛡️ PhishGuard</h2>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="detector.html">Detector</a>
+    <a href="awareness.html">Awareness</a>
+    <a href="cybercrime.html" class="active">Cyber Crime</a>
+    <a href="report.html">Report Scam</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="eyebrow">KNOW THE THREAT. PROTECT YOURSELF.</div>
+  <h1>CYBER CRIME</h1>
+  <p class="trust-line">Every scam starts with one thing:</p>
+  <div class="trust-word">TRUST</div>
+  <p class="explain">Learn how criminals manipulate that trust — and how to spot it before it costs you anything.</p>
+  <a href="#threats" class="explore-btn">EXPLORE THREATS ↓</a>
+</div>
+
+<!-- ============ 1. WHAT IS CYBERCRIME ============ -->
+<section id="what-is">
+  <div class="sec-title">
+    <div class="tag">🧠 SECTION 01</div>
+    <h2>What is Cybercrime?</h2>
+  </div>
+
+  <p class="cybercrime-quote">"It doesn't start with a computer.<br>It starts with a person."</p>
+
+  <div class="flow-wrap" id="flowWrap">
+    <div class="flow-step" data-i="0">TRUST</div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step" data-i="1">DECEPTION</div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step" data-i="2">ACCESS</div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step damage" data-i="3">DAMAGE</div>
+  </div>
+
+  <p class="cybercrime-body">
+    Cybercrime is illegal activity carried out using computers, mobile devices, networks
+    or the internet. It can involve stealing information, money, accounts or identities.
+  </p>
+
+  <button class="reveal-btn" onclick="toggleReveal()">See how it happens →</button>
+  <div class="reveal-box" id="revealBox">
+    <p><strong>Example:</strong> You get a text that looks like it's from your bank (Trust). It says your account will be blocked unless you verify now (Deception). You click the link and enter your login details (Access). Within minutes, your account is drained (Damage).</p>
+  </div>
+</section>
+
+<!-- ============ 2. THREAT WALL ============ -->
+<section id="threats">
+  <div class="sec-title">
+    <div class="tag">🎭 SECTION 02</div>
+    <h2>Common Cybercrimes</h2>
+  </div>
+
+  <div class="threat-grid">
+
+    <div class="threat-card" onclick="this.classList.toggle('open')">
+      <div class="emoji">🎣</div>
+      <h3>Phishing</h3>
+      <div class="short">Fake links</div>
+      <div class="tap">Tap for details</div>
+      <div class="threat-detail">
+        <p><strong>How it works:</strong> Fake emails or websites impersonate trusted brands to steal your login details.</p>
+        <p><strong>What they want:</strong> Passwords, OTPs, account access.</p>
+        <p><strong>Warning signs:</strong> Unknown sender, urgent tone, mismatched URL.</p>
+        <p><strong>Stay safe:</strong> Never click unverified links — go to the site directly instead.</p>
+      </div>
+    </div>
+
+    <div class="threat-card" onclick="this.classList.toggle('open')">
+      <div class="emoji">📱</div>
+      <h3>SMS Scam</h3>
+      <div class="short">Fake alerts</div>
+      <div class="tap">Tap for details</div>
+      <div class="threat-detail">
+        <p><strong>How it works:</strong> A text pretends to be your bank/courier, pushing you to click a link.</p>
+        <p><strong>What they want:</strong> Personal or financial info via a fake landing page.</p>
+        <p><strong>Warning signs:</strong> "Account blocked", "Update KYC now", shortened links.</p>
+        <p><strong>Stay safe:</strong> Verify through the official app, not the link in the text.</p>
+      </div>
+    </div>
+
+    <div class="threat-card" onclick="this.classList.toggle('open')">
+      <div class="emoji">💳</div>
+      <h3>Bank Fraud</h3>
+      <div class="short">Payment scam</div>
+      <div class="tap">Tap for details</div>
+      <div class="threat-detail">
+        <p><strong>How it works:</strong> Fake payment requests, QR codes, or "refund" calls trick you into sending money.</p>
+        <p><strong>What they want:</strong> Your UPI PIN, card details, or a direct transfer.</p>
+        <p><strong>Warning signs:</strong> Being asked to enter a PIN to "receive" money.</p>
+        <p><strong>Stay safe:</strong> Receiving money never needs a PIN. Ever.</p>
+      </div>
+    </div>
+
+    <div class="threat-card" onclick="this.classList.toggle('open')">
+      <div class="emoji">🛒</div>
+      <h3>Shopping Scam</h3>
+      <div class="short">Fake stores</div>
+      <div class="tap">Tap for details</div>
+      <div class="threat-detail">
+        <p><strong>How it works:</strong> Fake stores offer huge discounts, take payment, and never ship anything.</p>
+        <p><strong>What they want:</strong> Your card details and upfront payment.</p>
+        <p><strong>Warning signs:</strong> Unrealistic prices, no contact info, brand-new site.</p>
+        <p><strong>Stay safe:</strong> Check reviews and site age before you buy.</p>
+      </div>
+    </div>
+
+    <div class="threat-card" onclick="this.classList.toggle('open')">
+      <div class="emoji">📞</div>
+      <h3>Vishing</h3>
+      <div class="short">Fake calls</div>
+      <div class="tap">Tap for details</div>
+      <div class="threat-detail">
+        <p><strong>How it works:</strong> A caller poses as a bank employee or official to build trust over the phone.</p>
+        <p><strong>What they want:</strong> OTP, PIN, CVV — spoken directly to them.</p>
+        <p><strong>Warning signs:</strong> Pressure to act immediately, requests for codes.</p>
+        <p><strong>Stay safe:</strong> No real bank ever asks for your OTP or PIN on a call.</p>
+      </div>
+    </div>
+
+    <div class="threat-card" onclick="this.classList.toggle('open')">
+      <div class="emoji">👤</div>
+      <h3>Identity Theft</h3>
+      <div class="short">Data theft</div>
+      <div class="tap">Tap for details</div>
+      <div class="threat-detail">
+        <p><strong>How it works:</strong> Stolen personal data is used to open accounts or impersonate you.</p>
+        <p><strong>What they want:</strong> Your name, ID numbers, and personal details.</p>
+        <p><strong>Warning signs:</strong> Unfamiliar accounts, unexpected bills or notices.</p>
+        <p><strong>Stay safe:</strong> Limit what personal info you share publicly online.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 3. CYBER LAW FILE ============ -->
+<section id="law">
+  <div class="sec-title">
+    <div class="tag">⚖️ SECTION 03</div>
+    <h2>Know Your Cyber Law</h2>
+  </div>
+
+  <div class="law-file">
+    <div class="stamp">⚖️ CYBER LAW FILE</div>
+    <h3>IT ACT, 2000</h3>
+    <p>India's primary legislation addressing electronic activity and cyber offences.</p>
+    <button class="open-file-btn" onclick="toggleLaw()">OPEN FILE</button>
+
+    <div class="law-sections" id="lawSections">
+      <div class="law-sec">
+        <h4>Section 43</h4>
+        <p>Deals with certain unauthorized acts involving computer systems, such as accessing or damaging a system without permission.</p>
+      </div>
+      <div class="law-sec">
+        <h4>Section 66</h4>
+        <p>Covers certain computer-related offences, including hacking-related conduct, when the conditions of the provision are met.</p>
+      </div>
+      <div class="law-sec">
+        <h4>Section 66C / 66D</h4>
+        <p>Relate to identity theft and cheating by impersonation using computer resources.</p>
+      </div>
+      <div class="law-warning">
+        ⚠️ Important: Cyber laws can be amended and their application depends on the facts of a case. This page is for awareness, not legal advice.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. YOU'VE BEEN SCAMMED ============ -->
+<section id="scammed">
+  <div class="sec-title">
+    <div class="tag">🚨 SECTION 04</div>
+    <h2>You've Been Scammed. Now What?</h2>
+  </div>
+
+  <p class="panic-line">DON'T PANIC.</p>
+
+  <div class="timeline">
+    <div class="t-step">
+      <div class="t-num">01</div>
+      <div class="t-content"><h4>STOP</h4><p>Don't send more money.</p></div>
+    </div>
+    <div class="t-connector"></div>
+
+    <div class="t-step">
+      <div class="t-num">02</div>
+      <div class="t-content"><h4>SECURE</h4><p>Change compromised passwords and secure affected accounts.</p></div>
+    </div>
+    <div class="t-connector"></div>
+
+    <div class="t-step">
+      <div class="t-num">03</div>
+      <div class="t-content"><h4>CONTACT</h4><p>Contact your bank/payment provider through official channels if money or financial information is involved.</p></div>
+    </div>
+    <div class="t-connector"></div>
+
+    <div class="t-step">
+      <div class="t-num">04</div>
+      <div class="t-content"><h4>REPORT</h4><p>Report the incident through the appropriate official cybercrime reporting channels.</p></div>
+    </div>
+    <div class="t-connector"></div>
+
+    <div class="t-step">
+      <div class="t-num">05</div>
+      <div class="t-content"><h4>SAVE EVIDENCE</h4><p>Keep screenshots, transaction IDs, phone numbers, URLs and messages.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. HELP CENTER ============ -->
+<section id="help">
+  <div class="sec-title">
+    <div class="tag">🆘 SECTION 05</div>
+    <h2>Where Can I Report?</h2>
+  </div>
+  <p class="help-title">🚨 NEED HELP?</p>
+
+  <div class="help-grid">
+    <div class="help-card">
+      <div class="emoji">🚨</div>
+      <h4>CYBERCRIME REPORTING</h4>
+      <p>Report cybercrime through official government channels.</p>
+      <a href="https://cybercrime.gov.in" target="_blank" rel="noopener">Report Scam</a>
+
+    </div>
+
+    <div class="help-card">
+      <div class="emoji">🆘</div>
+      <h4>EMERGENCY</h4>
+      <p>Contact appropriate emergency services where immediate danger exists.</p>
+      <a href="tel:112">EMERGENCY HELP →</a>
+    </div>
+
+     <div class="reveal-box" id="fraudModal" style="max-width:600px; margin:25px auto 0;">
+    <p style="margin-bottom:10px;"><strong>If money has been lost or a payment was made:</strong></p>
+    <ul style="margin-left:18px; line-height:1.8;">
+      <li>Contact your bank/payment provider immediately using its official app, website, or the number on your card.</li>
+      <li>For cyber financial fraud in India, call <strong>1930</strong> immediately.</li>
+      <li>Report the incident on the <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer" style="color:#ff6b6b;">National Cyber Crime Reporting Portal</a>.</li>
+      <li>Keep transaction IDs, screenshots, and messages as evidence.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 6. STOP SCAN ============ -->
+<section id="stop">
+  <div class="sec-title">
+    <div class="tag">🛑 SECTION 06</div>
+    <h2>Your 10-Second Safety Scan</h2>
+  </div>
+
+  <div class="stop-wrap">
+    <p style="opacity:0.8;">Before you click...</p>
+    <div class="stop-big">STOP 🛑</div>
+
+    <div class="stop-grid">
+      <div class="stop-item">
+        <div class="letter">S</div>
+        <h4>SOURCE</h4>
+        <p>Who sent it?</p>
+      </div>
+      <div class="stop-item">
+        <div class="letter">T</div>
+        <h4>TIME PRESSURE</h4>
+        <p>Are they forcing me to act quickly?</p>
+      </div>
+      <div class="stop-item">
+        <div class="letter">O</div>
+        <h4>OFFER</h4>
+        <p>Is it too good to be true?</p>
+      </div>
+      <div class="stop-item">
+        <div class="letter">P</div>
+        <h4>PROOF</h4>
+        <p>Can I verify it independently?</p>
+      </div>
+    </div>
+
+    <p class="stop-footer">If something makes you panic, pause.</p>
+  </div>
+</section>
+
+<!-- ============ FINAL ============ -->
+<section id="final">
+  <div class="final-box">
+    <p class="line1">SCAMMERS USE TECHNOLOGY.</p>
+    <p class="line2">YOU HAVE SOMETHING THEY CAN'T CONTROL:<br><span class="decision">YOUR DECISION.</span></p>
+    <div class="verbs">THINK.<br>VERIFY.<br>REPORT.</div>
+
+    <div class="final-btns">
+      <a href="{{ url_for('detector') }}" class="btn-primary">🔍 Check a suspicious message</a>
+      <a href= "https://cybercrime.gov.in" class="btn-secondary">🚨 Report a scam</a>
+      <a href="{{ url_for('home') }}" class="btn-ghost">🏠 Back to PhishGuard</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 PhishGuard — Built for cyber safety awareness.
+</footer>
+
+<script src="{{ url_for('static', filename='js/cybercrime.js') }}"></script>
+
+
+</body>
+</html>

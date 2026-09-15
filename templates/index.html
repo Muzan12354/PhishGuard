@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<title>PishGuard - Home</title>
+</head>
+<body>
+
+<nav>
+  <h2>🛡️ PhishGuard</h2>
+  <span>Phishing Scam Detection Project</span>
+</nav>
+
+<section class="hero">
+  <h1>Stay Safe from <span>Phishing Scams</span></h1>
+  <p>
+    PhishGuard is a phishing scam detection tool that helps you identify
+    suspicious links, emails, and websites before they can steal your
+    personal information.
+  </p>
+
+  <!-- Update href to your actual check page, e.g. check.html -->
+  <a href="/detector" class="check-btn">Check Now</a>
+</section>
+
+<section class="info-section">
+  <h2>What is Cyber Fraud?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Phishing</h3>
+      <p>Fake emails, texts, or websites designed to trick you into revealing passwords, bank details, or personal data by pretending to be a trusted source.</p>
+    </div>
+    <div class="card">
+      <h3>Identity Theft</h3>
+      <p>Criminals use stolen personal information to open accounts, make purchases, or commit fraud in your name, often causing long-term financial damage.</p>
+    </div>
+    <div class="card">
+      <h3>Fake Websites</h3>
+      <p>Scammers clone legitimate websites (banks, shopping sites) with slightly altered URLs to capture login credentials and payment details.</p>
+    </div>
+    <div class="card">
+      <h3>How to Stay Safe</h3>
+      <p>Never click unknown links, verify sender addresses, look for HTTPS and correct domain spelling, and enable two-factor authentication everywhere.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 PhishGuard — Built for cyber safety awareness.
+</footer>
+
+</body>
+</html>

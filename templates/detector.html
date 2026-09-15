@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/detector.css') }}">
+<title>PhishGuard - Detector</title>
+</head>
+<body>
+
+<nav>
+  <h2>🛡️ PhishGuard</h2>
+  <div class="nav-links">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('detector') }}">Detector</a>
+    <a href="{{ url_for('awarness') }}">Awareness</a>
+    <a href="{{ url_for('cybercrime') }}">cybercrime</a>
+    <a href="{{ url_for('report') }}">Report</a>
+  </div>
+</nav>
+
+<main>
+  <h1>🔍 Scam &amp; Phishing Detector</h1>
+  <p class="subtitle">
+    Check suspicious messages, emails and website links<br>
+    for potential signs of scams.
+  </p>
+
+  <textarea id="userInput" placeholder="Paste a suspicious message, email or URL here..."></textarea>
+
+  <br>
+  <button class="analyze-btn" onclick="analyzeInput()">🔍 Analyze Now</button>
+
+  <div class="result-box" id="resultBox">
+    <h3>⚠️ Analysis Result</h3>
+    <p class="risk-level">Risk Level: <span id="riskLevel">HIGH</span></p>
+    <p class="summary" id="resultSummary">Potential scam detected.</p>
+    <p class="why">Why?</p>
+    <ul id="reasonsList">
+      <li>Suspicious keywords detected</li>
+      <li>Urgent language</li>
+      <li>Requests sensitive information</li>
+    </ul>
+  </div>
+
+  <p class="disclaimer">
+    ⚠️ This tool provides a basic risk assessment for awareness purposes.
+    It cannot guarantee that content is completely safe.
+  </p>
+</main>
+
+ <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

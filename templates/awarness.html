@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/awarness.css') }}">
+<title>PhishGuard - Awareness</title>
+</head>
+<body>
+<nav>
+  <h2>🛡️ PhishGuard</h2>
+  <div class="nav-links">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('detector') }}">Detector</a>
+    <a href="{{ url_for('awarness') }}">Awareness</a>
+    <a href="{{ url_for('cybercrime') }}">cybercrime</a>
+    <a href="{{ url_for('report') }}">Report</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Know the Enemy 🕵️</h1>
+  <p>Scammers have a whole playbook — here are the 5 tricks they run most often. Tap a card to flip it and see how each one really works.</p>
+</section>
+
+<div class="cards-wrap">
+
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <div class="emoji">🎣</div>
+        <h3>Phishing</h3>
+        <span class="tag">The classic bait-and-hook</span>
+        <span class="tap-hint">👆 Tap to reveal</span>
+      </div>
+      <div class="flip-back">
+        <h3>🎣 Phishing</h3>
+        <p>Fake emails, texts, or websites dressed up to look legit — all designed to get you to hand over passwords, OTPs, or banking details.</p>
+        <p><strong>Spot the hook:</strong></p>
+        <ul>
+          <li>Sender you don't recognize</li>
+          <li>"Do this NOW or else" urgency</li>
+          <li>A link that feels... off</li>
+          <li>Asking for your password or OTP</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <div class="emoji">📱</div>
+        <h3>Smishing</h3>
+        <span class="tag">SMS + Phishing</span>
+        <span class="tap-hint">👆 Tap to reveal</span>
+      </div>
+      <div class="flip-back">
+        <h3>📱 Smishing</h3>
+        <p>Same trick as phishing, delivered straight to your texts. One tap on the wrong link and your info is gone.</p>
+        <div class="example">"Your bank account will be blocked. Click here to update your KYC."</div>
+        <p style="margin-top:10px;">Real banks don't threaten you into clicking random links — screenshot it, don't tap it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <div class="emoji">📞</div>
+        <h3>Vishing</h3>
+        <span class="tag">Voice + Phishing</span>
+        <span class="tap-hint">👆 Tap to reveal</span>
+      </div>
+      <div class="flip-back">
+        <h3>📞 Vishing</h3>
+        <p>A calm, confident voice on the phone claiming to be your bank, a government office, or "support" — built entirely to earn your trust fast.</p>
+        <div class="warn">⚠️ Never share your OTP, PIN, CVV, or password on a call — no matter who they say they are.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <div class="emoji">🛒</div>
+        <h3>Shopping Scams</h3>
+        <span class="tag">Too good to be true</span>
+        <span class="tap-hint">👆 Tap to reveal</span>
+      </div>
+      <div class="flip-back">
+        <h3>🛒 Online Shopping Scams</h3>
+        <p>Fake stores pop up overnight, dangle unbeatable prices, take your payment — and the "package" never comes.</p>
+        <ul>
+          <li>Prices that seem impossible</li>
+          <li>No real contact info anywhere</li>
+          <li>Weird or unofficial payment methods</li>
+          <li>Site looks brand new / no reviews</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <div class="emoji">💳</div>
+        <h3>Banking & Payment Fraud</h3>
+        <span class="tag">Where the real money moves</span>
+        <span class="tap-hint">👆 Tap to reveal</span>
+      </div>
+      <div class="flip-back">
+        <h3>💳 Banking &amp; Payment Fraud</h3>
+        <p>Fake calls, texts, QR codes, or "payment requests" — all engineered to get you to send money or reveal financial details yourself.</p>
+        <div class="warn">💡 Remember: receiving money never requires entering your UPI PIN. If an app asks you to enter your PIN to "receive" a payment — that's the scam.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<section class="rules-section">
+  <div class="rules-header">
+    <h2>🛡️ 10 Golden Rules for Online Safety</h2>
+    <p>Print these in your brain. Seriously.</p>
+  </div>
+  <div class="rules-grid">
+    <div class="rule-badge"><div class="num">1</div><div class="text"><span class="icon">🔐</span> Never share your OTP or PIN — with anyone, ever.</div></div>
+    <div class="rule-badge"><div class="num">2</div><div class="text"><span class="icon">🔗</span> Don't blindly click links, even from people you know.</div></div>
+    <div class="rule-badge"><div class="num">3</div><div class="text"><span class="icon">🌐</span> Check the website address carefully before typing anything.</div></div>
+    <div class="rule-badge"><div class="num">4</div><div class="text"><span class="icon">📞</span> Don't trust unexpected calls claiming to be from your bank.</div></div>
+    <div class="rule-badge"><div class="num">5</div><div class="text"><span class="icon">💰</span> "Easy money" offers are never actually easy — or real.</div></div>
+    <div class="rule-badge"><div class="num">6</div><div class="text"><span class="icon">📧</span> Double-check the sender's actual email address, not just the name.</div></div>
+    <div class="rule-badge"><div class="num">7</div><div class="text"><span class="icon">🔑</span> Use strong, unique passwords — not "123456" for everything.</div></div>
+    <div class="rule-badge"><div class="num">8</div><div class="text"><span class="icon">🔒</span> Turn on 2-factor authentication wherever it's offered.</div></div>
+    <div class="rule-badge"><div class="num">9</div><div class="text"><span class="icon">📲</span> Keep your phone and apps updated — patches close real gaps.</div></div>
+    <div class="rule-badge"><div class="num">10</div><div class="text"><span class="icon">🚨</span> See something suspicious? Report it — don't just ignore it.</div></div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 PhishGuard — Built for cyber safety awareness.
+</footer>
+
+</body>
+</html>

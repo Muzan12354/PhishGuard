@@ -1,0 +1,138 @@
+*{ 
+    margin: 0; 
+    padding:0; 
+    box-sizing: 
+    border-box; 
+    font-family: 'Segoe UI', Arial, sans-serif; }
+  body { 
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff; 
+    min-height: 100vh; 
+    }
+
+  nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 40px; 
+    background: rgba(0,0,0,0.2); 
+    flex-wrap: wrap; gap: 15px;
+  }
+  nav h2 { color: #4ecdc4; }
+  .nav-links { 
+    display: flex; 
+    gap: 25px; 
+    flex-wrap: wrap; }
+  .nav-links a {
+    color: #fff; text-decoration: none; 
+    font-size: 0.95em;
+    opacity: 0.85;
+    transition: opacity 0.2s, 
+    color 0.2s;
+  }
+  .nav-links a:hover { 
+    opacity: 1; 
+    color: #4ecdc4; 
+  }
+  .nav-links a.active { 
+    color: #4ecdc4; 
+    opacity: 1; 
+    font-weight: bold; 
+  }
+
+  main { 
+    max-width: 700px; 
+    margin: 0 auto; 
+    padding: 50px 20px 70px; 
+    text-align: center; 
+  }
+
+  main h1 { 
+    font-size: 2.2em; 
+    margin-bottom: 12px; 
+  }
+  main > p.subtitle { 
+    opacity: 0.9; 
+    margin-bottom: 35px; 
+    line-height: 1.6; 
+    font-size: 1.05em; 
+  }
+
+  textarea {
+    width: 100%; 
+    min-height: 160px; 
+    border-radius: 10px; 
+    border: none;
+    padding: 18px; 
+    font-size: 1em; 
+    resize: vertical; 
+    font-family: inherit;
+    color: #222;
+  }
+  textarea:focus { 
+    outline: 3px solid #4ecdc4; 
+  }
+
+  .analyze-btn {
+    margin-top: 20px; 
+    background: #4ecdc4; 
+    color: #0f2027; 
+    border: none;
+    padding: 15px 40px; 
+    font-size: 1.1em; 
+    font-weight: bold; 
+    border-radius: 30px;
+    cursor: pointer; 
+    transition: transform 0.2s,
+    box-shadow 0.2s;
+  }
+  .analyze-btn:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(78,205,196,0.4); 
+  }
+
+  .result-box {
+    display: none;
+    margin-top: 35px; 
+    background: #fff; 
+    color: #222; 
+    border-radius: 10px;
+    padding: 25px; 
+    text-align: left; 
+    border-left: 6px solid #ff6b6b;
+  }
+  .result-box.active { 
+    display: block; 
+  }
+  .result-box h3 { 
+    color: #ff6b6b; 
+    margin-bottom: 12px; 
+    font-size: 1.2em; 
+  }
+  .result-box .risk-level { 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+  }
+  .result-box .risk-level span { 
+    color: #ff6b6b; 
+  }
+  .result-box p.summary { 
+    margin-bottom: 14px; 
+  }
+  .result-box .why { 
+    font-weight: bold; 
+    margin-bottom: 6px; 
+  }
+  .result-box ul { 
+    margin-left: 20px; 
+    line-height: 1.8; 
+  }
+
+  .disclaimer {
+    margin-top: 40px; 
+    font-size: 0.85em; 
+    opacity: 0.75; 
+    line-height: 1.6;
+    border-top: 1px solid rgba(255,255,255,0.15); 
+    padding-top: 20px;
+  }
