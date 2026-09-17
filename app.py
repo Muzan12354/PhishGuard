@@ -1,28 +1,6 @@
-from flask import Flask, render_template, request
-import sqlite3
+from flask import Flask, render_template
 
 app = Flask(__name__)
-
-
-# Create database and table
-def init_db():
-    conn = sqlite3.connect("database/reports.db")
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS reports (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL,
-            scam_type TEXT NOT NULL,
-            url TEXT,
-            description TEXT NOT NULL,
-            date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )
-    """)
-
-    conn.commit()
-    conn.close()
-
 
 # Home page
 @app.route('/')
@@ -43,39 +21,16 @@ def awarness():
 
 
 # Quiz page
-@app.route('/cybercrime')
-def cybercrime():
-    return render_template('cybercrime.html')
+@app.route('/Dashboard')
+def Dashboard():
+    return render_template('Dashboard.html')
 
 
 # Report page
-@app.route('/report', methods=['GET', 'POST'])
+@app.route('/report')
 def report():
-
-    if request.method == 'POST':
-
-        name = request.form['name']
-        scam_type = request.form['scam_type']
-        url = request.form['url']
-        description = request.form['description']
-
-        conn = sqlite3.connect("database/reports.db")
-        cursor = conn.cursor()
-
-        cursor.execute("""
-            INSERT INTO reports (name, scam_type, url, description)
-            VALUES (?, ?, ?, ?)
-        """, (name, scam_type, url, description))
-
-        conn.commit()
-        conn.close()
-
-        return "Report submitted successfully!"
-
     return render_template('report.html')
-
 
 # Start application
 if __name__ == '__main__':
-    init_db()
     app.run(debug=True)
